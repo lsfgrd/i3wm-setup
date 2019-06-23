@@ -1,0 +1,10 @@
+#!/bin/bash
+git config --global user.name "lsfgrd"
+git config --global alias.s status
+git config --global alias.c commit
+git config --global alias.ps push
+git config --global alias.a 'add .'
+git config --global alias.pl pl
+
+# setup nvim as core.editor
+git config --global core.editor nvim
