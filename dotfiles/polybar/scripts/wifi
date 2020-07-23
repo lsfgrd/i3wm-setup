@@ -1,0 +1,8 @@
+#!/bin/bash
+
+if [ "$(ip a | grep enp1s0 | head -1 | cut -d' ' -f9)" = "DOWN" ] 
+then
+    echo "  $(iwgetid -r)"
+else
+    echo
+fi

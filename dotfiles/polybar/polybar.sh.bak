@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+if type "xrandr"; then
+  for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
+	  pkill polybar
+    MONITOR=$m polybar --reload classic -c /home/bipirate/.config/polybar/config.ini &
+  done
+else
+	pkill polybar
+  polybar --reload classic -c /home/bipirate/.config/polybar/config.ini &
+fi
